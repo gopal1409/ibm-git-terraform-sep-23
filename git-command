@@ -1,1 +1,19 @@
+####create a project directory
+501  mkdir terraform-project
+  502  cd terraform-project/
+  503  touch main.tf
+  504  touch varaible.tf
+  505  touch terraform.tfvars
+###configure git global varaibles
+507  git config --global user.name "gopal"
+  508  git config --global user.email "gopal1409@gmail.com"
+  509  git config --list
+  510  git status
+###intialized the git repo for the first time
+  511  git init
+  512  ls -la
+  513  cd .git
+  514  ls
+  515  rm -rf .git
+  516  git status
 
