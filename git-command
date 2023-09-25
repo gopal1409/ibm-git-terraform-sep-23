@@ -95,6 +95,12 @@ cd ..
   656  git checkout master
   657  git branch
   658  cat calcy.py
+###merge a branch
+ 661  git branch
+
+  663  git merge add
+  664  history
+  665  cat calcy.py
 
 
 
