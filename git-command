@@ -13,6 +13,7 @@
   511  git init
   512  ls -la
   513  cd .git
+cd ..
   514  ls
   515  rm -rf .git
   516  git status
