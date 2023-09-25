@@ -58,3 +58,13 @@ cd ..
   585  git commit -m "my first commit"
   586  git log
 
+####reset all the changes
+ 630  notepad calcy.py
+  631  git diff
+  632  git status
+###git checkout command will be used to remove all those changes from working or staging files
+  633  git checkout calcy.py
+  634  git diff
+  635  cat calcy.py
+
+
