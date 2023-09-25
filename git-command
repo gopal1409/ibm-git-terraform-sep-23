@@ -41,6 +41,7 @@ cd ..
 ##git add -A will add all your file to the stagin area
   574  git add -A
   575  git status
+###git reset before commit
   576  git reset
   577  git status
 ###we need to ignore the unnecessar file
