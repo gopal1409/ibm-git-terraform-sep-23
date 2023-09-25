@@ -18,3 +18,13 @@ cd ..
   515  rm -rf .git
   516  git status
 
+
+###3lets understand git workflow. 
+ 523  git init
+  524  git add main.tf
+  525  git status
+  526  git commit -m "intialzied fir commit"
+  527  git log
+  528  git status
+
+
