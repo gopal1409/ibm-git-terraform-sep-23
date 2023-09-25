@@ -9,7 +9,7 @@
   508  git config --global user.email "gopal1409@gmail.com"
   509  git config --list
   510  git status
-###intialized the git repo for the first time
+###intialized the git repo for the first time we need to run git init
   511  git init
   512  ls -la
   513  cd .git
