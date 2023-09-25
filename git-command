@@ -59,6 +59,10 @@ cd ..
   586  git log
 
 ####reset all the changes
+ 593  echo "this is the frame for my calcy.py" > calcy.py
+  594  cat calcy.py
+  595  git add .
+  596  git commit -m "created the frame for calcy project"
  630  notepad calcy.py
   631  git diff
   632  git status
