@@ -71,4 +71,30 @@ cd ..
   634  git diff
   635  cat calcy.py
 
+####git branching
+ 638  git branch
+  639  cat calcy.py
+###to create a new branch git branch
+  640  git branch add
+  641  git branch
+  ###to move to a new branch git checkout is used
+  643  git checkout add
+  644  git branch
+###cat calcy .py show me that we got the content from master branch
+  645  cat calcy.py
+  ####open notepad add a new line in the add branch
+  649  notepad calcy.py
+  650  git status
+
+  652  git add .
+  653  git commit -m "Addtional function created"
+###now git log will show me you are in which branch
+  654  git log
+###compare the add branch with master branch
+  655  cat calcy.py
+  656  git checkout master
+  657  git branch
+  658  cat calcy.py
+
+
 
