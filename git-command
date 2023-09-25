@@ -27,4 +27,33 @@ cd ..
   527  git log
   528  git status
 
+###use of .gitignore
+cd ..
+ 565  mkdir calcapp
+  566  cd calcapp/
+  567  touch calcy.py
+  568  touch DS_Store
+  569  touch auth
+  570  touch secret
+  571  git status
+  572  git init
+  573  git status
+##git add -A will add all your file to the stagin area
+  574  git add -A
+  575  git status
+  576  git reset
+  577  git status
+###we need to ignore the unnecessar file
+  578  notepad .gitignore
+#######put all the file name you want to ignore inside.gitignore
+  579  git status
+####the file name should be always .gitignore withough any extension
+  580  mv .gitignore.txt .gitignore
+  581  git status
+  582  ls
+###inplace of git add -A you can put git add .
+  583  git add .
+  584  git status
+  585  git commit -m "my first commit"
+  586  git log
 
