@@ -1,0 +1,12 @@
+ 521  mkdir terraform-prj
+  522  cd terraform-prj/
+  523  touch main.tf
+  524  touch varaible.tf
+  525  git status
+  526  git init
+  527  git add .
+  528  git commit -m "intialized"
+  529  git log
+####below mentioned comand do not use it get the same from azure repo
+  530  git remote add origin git@ssh.dev.azure.com:v3/ibmdevopsg/terraform-project/terraform-project
+  531  git push origin master
