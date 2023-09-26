@@ -1,0 +1,58 @@
+###we will create a new project
+ 566  cd ..
+  567  mkdir test1
+  568  cd test1
+  569  touch main.tf
+  570  echo "this is main tf file" > main.tf
+  571  git add .
+  572  git init
+  573  git add .
+  574  git commit -m "terraform file"
+###they go to azure repo and createa a new project
+###go to repo and copy the command push an existing repo from the screen
+#paste it inside the folder please select the ssh 
+####then push the code. 
+###lets modify the file from remote repo console add a new line
+##then trry to do git push
+$ git push origin master
+To ssh.dev.azure.com:v3/ibmdevopsg/mergeproject/mergeproject
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'ssh.dev.azure.com:v3/ibmdevopsg/mergeproject/mergeproject'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+####to resolve the above mentioned error 
+git pull origin master
+###the file will be opened you can save the file using press Esc :wq!
+###now if git push will work
+git push origin master
+######
+
+the other way to resolve conflict is using git stash from local conflict
+we will make change in the remote repo. and try to do git pull
+$ git push origin master
+To ssh.dev.azure.com:v3/ibmdevopsg/mergeproject/mergeproject
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'ssh.dev.azure.com:v3/ibmdevopsg/mergeproject/mergeproject'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+#####may be there is chances that we are modifying local and want to keep those changes as it 
+ 582  touch varaibles.tf
+  
+  587  echo "this is second varaible " > varaibles.tf
+ 
+  591  git add varaibles.tf
+  ##you can stash the changes
+  592  git stash
+  ##check all your stash
+  593  git stash list
+  ##convert the temp changes into a branch
+  594  git stash branch var
+  595  git push origin --all
+
