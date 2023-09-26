@@ -53,6 +53,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ##check all your stash
   593  git stash list
   ##convert the temp changes into a branch
+####
   594  git stash branch var
   595  git push origin --all
 
