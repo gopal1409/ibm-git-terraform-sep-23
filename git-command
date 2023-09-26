@@ -102,5 +102,10 @@ cd ..
   664  history
   665  cat calcy.py
 
+###how to generate key pair
+ssh-keygen -t rsa
+ cat /c/Users/gopal/.ssh/id_rsa.pub
+
+
 
 
