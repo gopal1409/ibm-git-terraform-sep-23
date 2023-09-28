@@ -1,0 +1,6 @@
+mkdir myagent && cd myagent
+wget https://vstsagentpackage.azureedge.net/agent/3.225.0/vsts-agent-linux-x64-3.225.0.tar.gz
+tar zxvf vsts-agent-linux-x64-3.225.0.tar.gz
+./config.sh
+###it will as you for the pat key
+./run.sh
