@@ -1,0 +1,1 @@
+az ad sp create-for-rbac -n "TurbonomicSP" --role contributor --scope /subscriptions/def2cf32-c635-4684-ad00-5703dbddbe44    
