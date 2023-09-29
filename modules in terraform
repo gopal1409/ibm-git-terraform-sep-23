@@ -1,0 +1,7 @@
+##3lets clone the module
+
+git clone https://github.com/gopal1409/terraform-module-vnet-amdocs
+rm -rf .git
+git add .
+git commit -m "terraform module vnet"
+###then go to github and create an account. 
