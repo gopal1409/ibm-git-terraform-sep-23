@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+
+pool: default
+
+variables:
+  backendServiceArm: 'terraformcon'
+  backendAzureRmResourceGroupName: 'terraform-storage-rg'
+  backendAzureRmStorageAccountName: 'terraformstoragego'
+  backendAzureRmContainerName: 'tfstate'
+  backendAzureRmKey: 'ado.tfstate'
+
+#we are going to run a terraform task so we install terraform in the agent machine
+stages:
+  - stage: tfdestroy
+    jobs: 
+      - job: destroy
+        steps:
+          - task: TerraformInstaller@1
+            displayName: tfinstall
+            inputs:
+              terraformVersion: 'latest'
+          - task: TerraformTaskV4@4
+            displayName: init
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: 'terraformcon'
+              backendAzureRmResourceGroupName: 'terraform-storage-rg'
+              backendAzureRmStorageAccountName: 'terraformstoragego'
+              backendAzureRmContainerName: 'tfstate'
+              backendAzureRmKey: 'tfstate'
+          
+          - task: TerraformTaskV4@4
+            displayName: planning to destroy the resource
+            inputs:
+              provider: 'azurerm'
+              command: 'destroy'
+              environmentServiceNameAzureRM: '$(backendServiceArm)'
+  
