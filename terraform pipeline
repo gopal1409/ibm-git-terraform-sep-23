@@ -43,6 +43,7 @@ stages:
               provider: 'azurerm'
               command: 'validate'
           - task: TerraformTaskV4@4
+            displayName: planning to do something
             inputs:
               provider: 'azurerm'
               command: 'plan'
@@ -54,5 +55,23 @@ stages:
       - job: apply 
         steps: 
           - task: TerraformInstaller@1
+            displayName: install terraform
             inputs:
               terraformVersion: 'latest'
+          - task: TerraformTaskV4@4
+            displayName: init for apply
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: 'terraformcon'
+              backendAzureRmResourceGroupName: 'terraform-storage-rg'
+              backendAzureRmStorageAccountName: 'terraformstoragego'
+              backendAzureRmContainerName: 'tfstate'
+              backendAzureRmKey: 'tfkey'
+          - task: TerraformTaskV4@4
+            displayName: lets create the resource
+            inputs:
+              provider: 'azurerm'
+              command: 'apply'
+              environmentServiceNameAzureRM: 'terraformcon'
+          
